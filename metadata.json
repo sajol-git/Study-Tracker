@@ -1,0 +1,6 @@
+{
+  "name": "MedPrep",
+  "description": "Medical Study Tracker with Premium UI for Bangladeshi Students",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
