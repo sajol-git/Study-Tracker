@@ -40,7 +40,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun addStudyLog(chapterId: String, durationMinutes: Int, sessionType: String) {
         viewModelScope.launch {
-            val dateString = SimpleDateFormat("dd MMM, yyyy", Locale("bn", "BD")).format(Date())
+            val dateString = SimpleDateFormat("dd MMM, yyyy", Locale.getDefault()).format(Date())
             repository.insertLog(StudyLog(
                 chapterId = chapterId,
                 durationMinutes = durationMinutes,

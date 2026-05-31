@@ -81,7 +81,7 @@ fun TopHeader(viewModel: MainViewModel) {
     LaunchedEffect(Unit) {
         while (true) {
             currentTime = SimpleDateFormat("hh:mm a", Locale.US).format(Date())
-            currentDate = SimpleDateFormat("dd MMM, yyyy", Locale("bn", "BD")).format(Date())
+            currentDate = SimpleDateFormat("dd MMM, yyyy", Locale.getDefault()).format(Date())
             delay(1000)
         }
     }

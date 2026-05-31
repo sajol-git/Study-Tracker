@@ -85,14 +85,14 @@ fun AnalyticsScreen(viewModel: MainViewModel) {
                     verticalAlignment = Alignment.Bottom
                 ) {
                     // Compute last 7 days data
-                    val sdf = SimpleDateFormat("dd MMM, yyyy", Locale("bn", "BD"))
+                    val sdf = SimpleDateFormat("dd MMM, yyyy", Locale.getDefault())
                     val historyMap = studyLogs.groupBy { it.dateString }
                     val cal = Calendar.getInstance()
                     
                     val days = mutableListOf<String>()
                     val heights = mutableListOf<Float>()
                     
-                    val dayFormat = SimpleDateFormat("E", Locale("bn", "BD"))
+                    val dayFormat = SimpleDateFormat("E", Locale.getDefault())
                     
                     for (i in 6 downTo 0) {
                         val d = cal.clone() as Calendar
